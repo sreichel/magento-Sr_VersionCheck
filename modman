@@ -1,0 +1,3 @@
+src/app/code/community/Sr/VersionCheck              app/code/community/Sr/VersionCheck
+src/app/design/adminhtml/default/default/layout/*   app/design/adminhtml/default/default/layout/
+src/app/etc/modules/*                               app/etc/modules/

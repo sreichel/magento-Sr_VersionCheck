@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<config>
+    <menu>
+        <system>
+            <children>
+                <extensions>
+                    <children>
+                        <local>
+                            <disabled>1</disabled>
+                        </local>
+                        <custom>
+                            <disabled>1</disabled>
+                        </custom>
+                        <modules translate="title" module="sr_version_check">
+                            <title>Module List</title>
+                            <action>adminhtml/connectmodules</action>
+                            <sort_order>999</sort_order>
+                        </modules>
+                    </children>
+                </extensions>
+            </children>
+        </system>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <sr_version_check translate="title" module="sr_version_check">
+                        <title>Magento Connect Modules</title>
+                            <children>
+                                <modules translate="title" module="sr_version_check">
+                                    <title>Module List</title>
+                                </modules>
+                            </children>
+                    </sr_version_check>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>
