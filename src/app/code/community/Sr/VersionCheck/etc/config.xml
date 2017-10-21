@@ -2,7 +2,7 @@
 <config>
     <modules>
         <Sr_VersionCheck>
-            <version>0.0.1</version>
+            <version>0.0.2</version>
         </Sr_VersionCheck>
     </modules>
     <global>
@@ -24,9 +24,12 @@
             <sr_version_check_resource>
                 <class>Sr_VersionCheck_Model_Resource</class>
                 <entities>
-                    <modules>
+                    <module>
                         <table>connect_modules</table>
-                    </modules>
+                    </module>
+                    <backup>
+                        <table>connect_modules_backup</table>
+                    </backup>
                 </entities>
             </sr_version_check_resource>
         </models>

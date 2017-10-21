@@ -11,16 +11,25 @@
     <adminhtml_connectmodules_index>
         <update handle="adminhtml_connectmodules"/>
         <reference name="content">
-            <block type="sr_version_check/adminhtml_modules" name="modules">
-                <block type="sr_version_check/adminhtml_modules_grid" name="modules.grid" as="grid"/>
+            <block type="sr_version_check/adminhtml_backup" name="backup">
+                <block type="sr_version_check/adminhtml_backup_grid" name="backup.grid" as="grid"/>
             </block>
         </reference>
     </adminhtml_connectmodules_index>
 
-    <adminhtml_connectmodules_edit>
+    <adminhtml_installedmodules_index>
         <update handle="adminhtml_connectmodules"/>
         <reference name="content">
-            <block type="sr_version_check/adminhtml_modules_edit" name="modules.edit"/>
+            <block type="sr_version_check/adminhtml_module" name="modules">
+                <block type="sr_version_check/adminhtml_module_grid" name="modules.grid" as="grid"/>
+            </block>
         </reference>
-    </adminhtml_connectmodules_edit>
+    </adminhtml_installedmodules_index>
+
+    <adminhtml_installedmodules_edit>
+        <update handle="adminhtml_connectmodules"/>
+        <reference name="content">
+            <block type="sr_version_check/adminhtml_module_edit" name="modules.edit"/>
+        </reference>
+    </adminhtml_installedmodules_edit>
 </layout>

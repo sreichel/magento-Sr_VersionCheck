@@ -8,14 +8,15 @@
 /**
  * SQL setup
  */
-class Sr_VersionCheck_Model_Resource_Modules_Collection extends Mage_Core_Model_Resource_Db_Collection_Abstract
+class Sr_VersionCheck_Model_Module extends Mage_Core_Model_Abstract
 {
+    protected $_eventPrefix = 'sr_version_check_module';
+
     /**
      * Set location of the resource file
      */
     public function _construct()
     {
-        parent::_construct();
-        $this->_init('sr_version_check/modules');
+        $this->_init('sr_version_check/module');
     }
 }

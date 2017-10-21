@@ -9,12 +9,12 @@ class Sr_VersionCheck_Model_Cron
 {
     public function checkModuleVersion()
     {
-        $collection = Mage::getModel('sr_version_check/modules')->getCollection()
+        $collection = Mage::getModel('sr_version_check/module')->getCollection()
             ->addFieldToFilter('url', array('neq' => null))
             ->addFieldToFilter('url', array('neq' => ''));
 
         foreach ($collection as $module) {
-            $module->setLatestVersion(Mage::helper('sr_version_check')->getConnectVersion($module));
+            $module->setLatestVersion(Mage::helper('sr_version_check')->getLatestVersion($module));
         }
         $collection->save();
     }

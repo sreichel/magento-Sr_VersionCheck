@@ -8,13 +8,13 @@
 /**
  * SQL setup
  */
-class Sr_VersionCheck_Model_Resource_Modules extends Mage_Core_Model_Resource_Db_Abstract
+class Sr_VersionCheck_Model_Resource_Backup extends Mage_Core_Model_Resource_Db_Abstract
 {
     /**
      * Set DB tables primary key
      */
     public function _construct()
     {
-        $this->_init('sr_version_check/modules', 'modules_id');
+        $this->_init('sr_version_check/backup', 'module_id');
     }
 }

@@ -5,7 +5,7 @@
  * @author      Sven Reichel <github-sr@hotmail.com>
  */
 
-class Sr_VersionCheck_Block_Adminhtml_Modules_Edit_Form extends Mage_Adminhtml_Block_Widget_Form
+class Sr_VersionCheck_Block_Adminhtml_Module_Edit_Form extends Mage_Adminhtml_Block_Widget_Form
 {
     /**
      *
@@ -38,7 +38,7 @@ class Sr_VersionCheck_Block_Adminhtml_Modules_Edit_Form extends Mage_Adminhtml_B
     }
 
     /**
-     * @return Sr_VersionCheck_Model_Modules
+     * @return Sr_VersionCheck_Model_Module
      */
     protected function _getModule()
     {
@@ -54,8 +54,8 @@ class Sr_VersionCheck_Block_Adminhtml_Modules_Edit_Form extends Mage_Adminhtml_B
             'legend'    => Mage::helper('sr_version_check')->__('General'),
         ));
 
-        $fieldset->addField('modules_id', 'hidden', array(
-            'name'      => 'module[modules_id]',
+        $fieldset->addField('module_id', 'hidden', array(
+            'name'      => 'module[module_id]',
         ));
 
         $fieldset->addField('name', 'text', array(
